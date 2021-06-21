@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnStartJob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="start job" />
+
+        <Button
+            android:id="@+id/btnStartPeriodJob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="start Period Job" />
+
+        <Button
+            android:id="@+id/btnStartCycleJob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="start Job - Service Cycle" />
+
+        <Button
+            android:id="@+id/btnStopCycleJob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stop Job - Service Cycle" />
+
+
+        <Button
+            android:id="@+id/btnStartService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Default Service" />
+
+        <Button
+            android:id="@+id/btnStartStaticService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Static Service" />
+
+        <Button
+            android:id="@+id/btnStopStaticService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stop Static Service" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black" />
+
+        <Button
+            android:id="@+id/btnStartChatService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Chat Service"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnStopChatService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stop Chat Service"
+            android:textAllCaps="false" />
+
+
+        <Button
+            android:id="@+id/btnStartCycleChatJob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="start Chat Job - Service Cycle"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnStopCycleChatJob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stop Chat Job - Service Cycle"
+            android:textAllCaps="false" />
+
+
+        <Button
+            android:id="@+id/btnStartTimingChatJob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="start Chat Job - Service Timing"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+</ScrollView>
