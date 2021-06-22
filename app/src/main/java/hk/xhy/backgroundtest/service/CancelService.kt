@@ -20,7 +20,7 @@ class CancelService : Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         if (Build.VERSION.SDK_INT > Build.VERSION_CODES.JELLY_BEAN_MR2
-            && Build.VERSION.SDK_INT <= Build.VERSION_CODES.N_MR1
+            && Build.VERSION.SDK_INT < Build.VERSION_CODES.N_MR1
         ) {
             val notification = StaticNotification(this)
             notification.show(this)

@@ -75,7 +75,7 @@ class ChatService : Service() {
         Log.i(TAG, "onCreate: ")
         super.onCreate()
         notification.show(this)
-        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.N_MR1 &&
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N_MR1 &&
             Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2
         ) {
             val intent = Intent(this, CancelService::class.java)

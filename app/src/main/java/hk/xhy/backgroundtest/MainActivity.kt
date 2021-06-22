@@ -14,6 +14,8 @@ import com.blankj.utilcode.util.ServiceUtils
 import com.blankj.utilcode.util.SnackbarUtils
 import hk.xhy.backgroundtest.job.ChatJobService
 import hk.xhy.backgroundtest.job.TestJobService
+import hk.xhy.backgroundtest.notification.StaticNotification
+import hk.xhy.backgroundtest.service.CancelService
 import hk.xhy.backgroundtest.service.ChatService
 import hk.xhy.backgroundtest.service.StaticService
 import hk.xhy.backgroundtest.utils.Constants.*
@@ -64,6 +66,26 @@ class MainActivity : AppCompatActivity() {
 
         btnStopStaticService.setOnClickListener {
             stopService(Intent(this, StaticService::class.java))
+        }
+
+        btnCheckNotification.setOnClickListener {
+
+            if (ServiceUtils.isServiceRunning(CancelService::class.java)) {
+                Log.i(TAG, "onCreate: cancel service is running")
+                stopService(Intent(this, CancelService::class.java))
+            }
+
+            if (ServiceUtils.isServiceRunning(ChatService::class.java)) {
+                Log.i(TAG, "onCreate: Chat service is running")
+                stopService(Intent(this, ChatService::class.java))
+            }
+
+            if (ServiceUtils.isServiceRunning(StaticService::class.java)) {
+                Log.i(TAG, "onCreate: Static service is running")
+                stopService(Intent(this, StaticService::class.java))
+            }
+            val notification = StaticNotification(this)
+            notification.cancel()
         }
 
         btnStartChatService.setOnClickListener {

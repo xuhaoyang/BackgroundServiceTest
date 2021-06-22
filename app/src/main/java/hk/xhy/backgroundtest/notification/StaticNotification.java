@@ -6,7 +6,9 @@ import android.app.NotificationManager;
 import android.app.Service;
 import android.content.Context;
 import android.os.Build;
+import android.service.notification.StatusBarNotification;
 import android.text.TextUtils;
+import android.util.Log;
 
 import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
@@ -103,6 +105,12 @@ public class StaticNotification extends BaseNotification<BaseData> {
     }
 
     public void cancel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            StatusBarNotification[] notifications = manager.getActiveNotifications();
+            for (int i = 0; i < notifications.length; i++) {
+                Log.i(TAG(), i + ". " + notifications[i].toString());
+            }
+        }
         manager.cancel(NF_FOREGROUD_ID);
     }
 }

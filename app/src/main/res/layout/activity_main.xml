@@ -57,6 +57,13 @@
             android:layout_height="wrap_content"
             android:text="Stop Static Service" />
 
+        <Button
+            android:id="@+id/btnCheckNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Check Notification" />
+
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
